@@ -1,0 +1,331 @@
+@import "bootstrap";
+
+
+/* universal */
+$white: #fff;
+$grayMediumLight: #eaeaea;
+$greenLight: #00BA96;
+$blueDark: #003399;
+$blueMedium: #477DB3;
+$black: #000;
+$lightOrange: #CCCCFF;
+$navyBlue: #000084;
+$yellow: #FFDD55;
+$blueLight: #86DBFF;
+$rust: #912C00;
+@font-face {
+    font-family: 'tangerineregular';
+    src: url('/fonts/tangerine_regular-webfont.eot');
+    src: url('/fonts/tangerine_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/tangerine_regular-webfont.woff') format('woff'),
+         url('/fonts/tangerine_regular-webfont.ttf') format('truetype'),
+         url('/fonts/tangerine_regular-webfont.svg#tangerineregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html {
+//  overflow-y: scroll;
+}
+
+section {
+  //overflow: auto;
+}
+
+* {
+  font-family:  "tangerineregular", "Trebuchet MS", Arial, sans-serif;
+}
+
+body {
+  //padding-top: 60px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+/* typography */
+
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1#big {
+ 
+  font-size: 2.5em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+  //font-weight: normal;
+  color: $rust;
+  font-family: "Helvetica Sans";
+  font-weight: 200;
+}
+
+h1#small {
+  font-size: 1.7em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $grayLight;
+  font-family: "Helvetica";
+}
+
+h2 {
+  font-size: 1.8em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $rust;
+}
+
+.head
+{
+   font-size: 1.8em; // Font for the header
+}
+
+h3 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $greenLight;
+}
+  
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+/* header */
+.navbar {
+    width: 100%;
+    height: 100%;
+    z-index:0;
+    height: 6em;
+    background-image: url('/images/gg.png');
+    background-size:cover;
+    background-color: $navyBlue;
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+#main_nav { 
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    top: 38px;
+    left: 100px;
+    padding: 0;
+    #logo
+    {
+      margin-bottom: -10px;
+      margin-right: 10px;
+      color: $rust;
+      font-size:58px;
+      font-family: tangerineregular;
+      background:none;
+      z-index: 9;
+    }
+
+   li {
+      background: #912C00;
+      display: inline-block;
+      margin-left: -3px;
+      font-family: "Helvetica";
+      font-size:15px;
+      padding: 10px 10px 10px 10px;
+      //color: $yellow;
+     &.active,&:hover {
+         background: #fff;
+         margin-bottom: -1px; 
+         color:#777;
+         //font-weight:bold;
+ 
+         }
+      }
+   } 
+
+
+/* footer */
+footer {
+  padding-top: 30px; // Gap between border and text
+  border-top: 1px solid $grayLight; // Border line
+  color: $white;  // Color of the footer text
+  background-color: $blueLight; //  footer color background
+  a {
+    color: $white; // Hyper link color
+    &:hover {
+    color: $yellow;
+    }
+ }
+ small {
+  float: left;
+ }
+  
+  ul { // List Items for the right of the footer
+  float: right; // Anchor to the right
+  list-style: none; 
+    li
+    {
+      margin-left: 10px; // Gap between text and left margin
+      display:inline-block;
+    } // end li
+  } // end ul
+} // footer close
+
+section#MainContent
+{
+ position: relative;
+ padding: 60px; 
+ height: 600px;
+ //background-color: $grayMediumLight;
+
+}
+
+section#Skills
+{
+  padding: 60px;
+  color: $black;
+  font-size: 14px;
+  background-color: $grayMediumLight;
+  height: 400px;
+
+  //background-image: "ggbridge.png";
+
+}
+section#Services
+{
+   height: 60em;
+   z-index: 1;
+}
+a.get-started {
+  font-weight: 700;
+  background-color: #f1bd40;
+  color: #282828;
+  text-transform: uppercase;
+  -webkit-border-radius:50px;
+  border-radius: 50px;
+}
+
+*{
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif; 
+  margin: 0 0 0 0
+}
+
+.feature {
+	padding-top: 10px;
+	border-radius: 10px;
+	-webkit-transition: 0.2s linear;
+	-moz-transition: 0.2s linear;
+	-o-transition: 0.2s linear;
+        border: 2px solid $blueLight;
+	border-bottom: none;
+	img {
+		width:100px;
+		height: 100px;
+	    }
+
+	li {
+	  	cursor: pointer;
+                color: $grayDarker;
+                border: 1px solid #f2f2f2;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                list-style:none;
+                &:hover {
+                 background-color: $yellow;
+                }
+             }
+}
+.feature li:last-child {
+	border-bottom: 2px solid $blueLight;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+}
+.adv  {
+  li {
+	list-style: none;
+     }
+}
+   
+.skills
+{
+	li  {
+		display: inline-block;
+		list-style: none;
+		height:50px;
+		width:50px;
+		padding-left: 20px;
+		
+	}
+
+}
+.button 
+{
+  font-weight: 700;
+  background-color: #f1bd40;
+  color: #282828;
+  text-transform: uppercase;
+  -webkit-border-radius:50px;
+  border-radius: 50px;
+  padding: 20px 20px 20px 20px;
+  cursor: pointer;
+  &:hover
+   {
+	background-color: #f6BD52;
+   }
+}
+	
+#Intro
+{
+   font-size: 20px;
+   
+
+}
+
+font.rust
+{
+  color: $rust;
+  font-size: 18px;
+}
+.sidebar
+{
+      padding-left: 50px;
+      padding-right: 30px;
+      padding-top: 10px;
+      -webkit-transition: 0.2s linear;
+      -moz-transition: 0.2s linear;
+      -o-transition: 0.2s linear;
+      border: 2px solid #f2f2f2;
+      background-color: #f0f5fa;
+      border-bottom: none;
+      height: 50em;
+      li {
+                cursor: pointer;
+                color: $blueMedium;
+                border: 1px solid #f2f2f2;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                list-style:none;
+                &:hover {
+                  color: $grayDarker;
+                }
+             }
+}
+.details {
+   display: none;
+}

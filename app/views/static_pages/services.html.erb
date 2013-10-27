@@ -1,0 +1,100 @@
+<% provide(:title, 'SERVICES') %>
+<section id="Services">
+<div class="row">
+  <div class="span-2 sidebar"> 
+       <h2> SERVICES  </h2>
+       <h3> 
+          <li  id="DataEntry"> Data Entry </li>
+          <li  id="EmailCustomerSupport"> Email Marketing </li>
+  	  <li  id="SocialMediaSupport"> Social Media Support </li>
+          <li> Data Entry </li> 
+          <li> Open Cart Ecommerce </li>
+          <li> Document Conversion </li>
+          <li> Typing and Proof-reading </li>
+          <li> Image Editing and Retouching 
+          <li> Video and Audio  Transcription </li>
+      </h3>
+
+
+  </div> <!--Span2--!>
+
+  <div class="span-10 antialiased">
+  <h2> <center> Shank Global Solutions offers the following skills </center> </h2> 
+	<div class="details" id="DataEntry"> 
+		We offer Data Entry Services
+		<div class="skills"> 
+		  <li> <img src="/images/Google.jpeg"> </li>
+		  <li> <img src="/images/Office.jpeg"> </li>
+                </div>
+        </div>
+  
+        <div class=details id="EmailCustomerSupport">
+  		We offer Email Support Services
+		 <div class="skills">
+		   <li> <img src="/images/Office.jpeg"> </li>
+		</div>
+        </div>
+        <div class=details id="SocialMediaSupport">
+		We offer Social Media Support
+		<div class="skills">
+		  <li> <img src="/images/hoot.jpeg"> </li>
+		</div>
+
+	</div> <!-- Social Media Support --!>
+
+  </div> <!-- large 10 --!>
+
+</div> <!-- Row --!>
+
+<script>
+   
+  function displayServices(item) 
+  {
+	var vari=$('div.details#'+item);
+	console.log('Coming here', vari);
+	$('div.details#'+item)
+		.show()
+		.siblings().hide();
+ 		$('div.sidebar').find('li#'+item)
+				.css('color', '#353535')
+				.siblings().css('color', '#477DB3');
+			
+	
+  } 
+  $('div.sidebar').find('li#DataEntry').on('click', function (){
+		$('div.details#DataEntry')
+                                      .show()
+ 				      .siblings().hide();
+		$('div.sidebar').find('li#DataEntry')
+                                .css('color', '#353535')
+				.siblings().css('color', '#477DB3');
+  });
+
+  $('div.sidebar').find('li#EmailCustomerSupport').on('click', function (){
+                $('div.details#EmailCustomerSupport')	
+				      .show()
+                                      .siblings().hide();
+
+  		  $('div.sidebar').find('li#EmailCustomerSupport')
+                                .css('color', '#353535')
+                                .siblings().css('color', '#477DB3');
+  });
+ 
+  $('div.sidebar').find('li#SocialMediaSupport').on('click', function (){
+                $('div.details#SocialMediaSupport')	
+				    .show()
+                                    .siblings().hide();
+
+  });
+ 
+  $('div.sidebar').find('li#DataEntry').on('click', function (){
+                $('div.details#DataEntry').show();
+  });
+
+  $('div.sidebar').find('li#DataEntry').on('click', function (){
+                $('div.details#DataEntry').show();
+  });
+</script>
+
+
+

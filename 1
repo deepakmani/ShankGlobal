@@ -1,0 +1,112 @@
+<% provide(:title, 'HOME') %>
+
+<% provide(:currently_at, 'Home') %>
+<script>
+
+  var sliderUL = jQuery('ul.slider');
+  var images = sliderUL.find('img');
+  var imageLength = images.length;
+  var imageWidth = images[0].width;
+  var current = 1;
+  var sliderNav = $('div.slider-nav');
+  var margin = 0; 
+  var loc = 0;
+  $('div.slider-nav').find('li#next').on('click', function() {
+      if (current === imageLength)
+      {
+         margin = 0;
+         current = 1;
+      }
+      else {
+        margin = loc-imageWidth;
+        current++;
+      }
+      loc = margin;	
+      //sliderUL.animate({'margin-left': margin});
+      sliderUL.css('margin-left', margin);
+      console.log('margin: %d, current %d ', margin,current); 
+  });
+  $('div.slider-nav').find('li#prev').on('click', function() {
+      if (current === 1)
+      {
+         margin = -(imageLength*imageWidth) + imageWidth;
+         current = imageLength;
+      }
+      else {
+         margin = loc+imageWidth;
+         current--;
+      }
+      loc = margin;       
+      sliderUL.animate({'margin-left': margin});
+      console.log('margin: %d, current %d ', margin,current);	
+  });
+
+  $('div#feature1').on('click', function() {
+    $('div.content1').hide();
+    console.log("hi");
+ });
+
+</script>
+
+<section id="Content1">
+  <h1 id="dynamicSection"> Quality Offshore Services for less </h1> 
+  <div class="container">
+    <div class="row">  
+      <div class="span4">
+        <div class="feature">
+          <h2> <center> Virtual Administration </center> </h2>
+          <center> <%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %> </center>  
+          <h3> 
+               <li> Email Customer Support </li>
+               <li> Appointment Setting    </li>
+               <li> Social Media Management  </li>
+               <li> Proof-reading </li>
+          </h3>
+      </div> <!-- Feature --!>
+    </div>  <!-- Span --!>
+    <div class="span4">
+     <div class="feature" id="feature2">
+      <h2> <center> Back Office Support </center> </h2>
+	 <center> <%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %> </center>
+      <h3> 
+	   <li>  Document conversion </li>
+           <li>  Order Processing    </li>
+           <li>  Data Entry </li>
+           <li>  Audio/Video Transcription </li>
+      </h3>
+      <!-- Image for user targeting --!>
+    </div> 
+  </div>
+  <div class="span4">
+   <div class="feature" id="feature3">
+   <h2> Photo Editing </h2>
+      <center> <%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %> </center>
+      <h3> 
+           <li>  Retouching Blemishes </li>
+           <li>  Image Enlargement    </li>
+      </h3>
+     <!-- Image for reengagement --!>
+   </div>
+  </div>   
+
+</div>    <!-- Row --!> 
+
+</section>
+
+<section id="Skills">
+   <h2> Shank Global Solutions offers you the following skill sets</h2>
+   <div class="skills">
+     <li> <img src="/images/LP.jpg"> </li>
+     <li> <img src="/images/Word.jpeg"> </li> 
+     <li> <img src="/images/Google.jpeg"> </li>
+     <li> <img src="/images/Photoshop.jpeg"> </li>
+     <li> <img src="/images/hoot.jpeg"> </li>
+   </div>
+</section>
+
+<script>
+   $('div#feature1').on('click', function() {
+    $('div.content1').show();
+    console.log("hi");
+ });
+</script>
