@@ -2,11 +2,10 @@
  <nav id="main_nav" role="navigation">
   <ul>
     <li id="logo"> Shank Global Solutions </li> 
-    <%= nav_tab 'HOME', root_path, current:yield(:title) %> 
-    <%= nav_tab 'SERVICES', services_path, current:yield(:title)%> 
-    <%= nav_tab 'BLOG', about_path, current:yield(:title)%>
-    <%= nav_tab 'CONTACT', about_path, current:yield(:title) %></li>
-    <%= nav_tab 'ABOUT', about_path, current:yield(:title)%>
+    <%= nav_tab 'HOME', root_path, current:yield(:tab) %> 
+    <%= nav_tab 'SERVICES', services_path, current:yield(:tab)%> 
+    <%= nav_tab 'CONTACT', contact_path, current:yield(:tab) %></li>
+    <%= nav_tab 'ABOUT', about_path, current:yield(:tab)%>
 
   </ul>
 

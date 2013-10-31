@@ -1,7 +1,7 @@
 module NavHelper
   def nav_tab (title, url, options = {})
     current_tab = options.delete(:current)
-    options[:class] = (current_tab == title) ? 'active' : 'inactive'
+    options[:class] = (title[current_tab] != nil) ? 'active' : 'inactive'
     content_tag(:li, link_to(title, url), options)
   end
 

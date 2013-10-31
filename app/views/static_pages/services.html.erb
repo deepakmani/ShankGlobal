@@ -1,99 +1,188 @@
 <% provide(:title, 'SERVICES') %>
-<section id="Services">
-<div class="row">
-  <div class="span-2 sidebar"> 
-       <h2> SERVICES  </h2>
-       <h3> 
-          <li  id="DataEntry"> Data Entry </li>
-          <li  id="EmailCustomerSupport"> Email Marketing </li>
-  	  <li  id="SocialMediaSupport"> Social Media Support </li>
-          <li> Data Entry </li> 
-          <li> Open Cart Ecommerce </li>
-          <li> Document Conversion </li>
-          <li> Typing and Proof-reading </li>
-          <li> Image Editing and Retouching 
-          <li> Video and Audio  Transcription </li>
-      </h3>
+<% provide(:tab, 'SERVICES') %>
 
+<div class="row" id="servicesRow">
+  <div class="span3 sidebar"> 
+        SERVICES
+       <h3> 
+ 	  <li id="ECS"> E-Customer Support </li>
+          <li id="IMC"> Internet Marketing Campaign </li>
+  	  <li id="SMS"> Social Media Support </li>
+          <li id="DE"> Data Entry and Web Research </li> 
+          <li id="APR"> Article Typing and Proof-Reading </li>
+          <li id="AVT"> Audio and Video Transcription </li>
+          <li id="IER"> Image Editing and Retouching 
+          <li id="DCT"> Document Conversion </li>
+      </h3>
 
   </div> <!--Span2--!>
 
-  <div class="span-10 antialiased">
-  <h2> <center> Shank Global Solutions offers the following skills </center> </h2> 
-	<div class="details" id="DataEntry"> 
-		We offer Data Entry Services
+  <div class="span9 details-container">
+	<div class="details" id="DE"> 
+		<h2> Data Entry Services </h2>
+		<div> We give customer support services to users that is prompt and well written We start at $5/hour and give discouted pacakages!Hi my name is Deepak. How are you doing today </div>
+                <br> <br> <hr>
 		<div class="skills"> 
-		  <li> <img src="/images/Google.jpeg"> </li>
-		  <li> <img src="/images/Office.jpeg"> </li>
-                </div>
-        </div>
+                    <li> <center> <img src="/images/Google.jpeg"> </li>
+		    <li> <img src="/images/Office.jpeg"> </center></li>
+               </div> <!-- Skills for Data Entry --!>
+        </div> <!-- DataEntry Details --!>
   
-        <div class=details id="EmailCustomerSupport">
-  		We offer Email Support Services
-		 <div class="skills">
-		   <li> <img src="/images/Office.jpeg"> </li>
-		</div>
-        </div>
-        <div class=details id="SocialMediaSupport">
-		We offer Social Media Support
+        <div class=details id="ECS">
+            <h2> E-Customer Support Services </h2>
+                <div> We strive to give customer support service to users that is prompt, polite and written with
+                 correct grammar. 
+                We used software to deliver context based communication that can resovlve customer issues. </div>
+                <br> <br> <hr>
+                <div class="skills">
+                  <li> <img src="/images/LP.jpg"> </li>
+                  <li> <img src="/images/Office.jpeg"> </li>
+                  <li> <img src="/images/ZenDesk.jpeg"> </li>
+                </div> <!-- Skills for Data Entry --!>
+	</div>
+        <div class=details id="SMS">
+                <h2> Social Media Support </h2>
+		  <div> We give customers the ability to provide make postings on Facebook, Twitter, Youtube and Google Plus.
+                  </div>
+ 
+                <br> <br> <hr>
 		<div class="skills">
 		  <li> <img src="/images/hoot.jpeg"> </li>
 		</div>
 
 	</div> <!-- Social Media Support --!>
+      
 
-  </div> <!-- large 10 --!>
+       <div class=details id="IMC">
+                <h2> Internet Marketing Campaign </h2>
+                  <div> We give customers the ability to provide make postings on Facebook, Twitter, Youtube and Google Plus.
+                  </div>
+ 
+                <br><br><hr>
+                <div class="skills">
+                  <li> <img src="/images/MailChimp.jpeg"> </li>
+                </div>
+       </div>
 
-</div> <!-- Row --!>
+      <div class=details id="APR">
+                <h2> Article Typing and Proof-Reading </h2>
+                  <div> We give customers the ability to provide make postings on Facebook, Twitter, Youtube and Google Plus.
+                  </div>
+ 
+                <br><br><hr>
+                <div class="skills">
+                  <li> <img src="/images/Word.jpeg"> </li>
+                </div>
+       </div>
 
+      <div class=details id="AVT">
+                <h2> Audio and Video Transcription </h2>
+                  <div> We give customers the ability to provide make postings on Facebook, Twitter, Youtube and Google Plus.
+                  </div>
+ 
+                <br><br><hr>
+                <div class="skills">
+                  <li> <img src="/images/Word.jpeg"> </li>
+                </div>
+       </div>
+
+       <div class=details id="IER">
+                <h2> Article Typing and Proof-Reading </h2>
+                  <div> We give customers the ability to provide make postings on Facebook, Twitter, Youtube and Google Plus.
+                  </div>
+ 
+                <br><br><hr>
+                <div class="skills">
+                  <li> <img src="/images/Word.jpeg"> </li>
+                </div>
+       </div>
+ 
+  </div> <!-- Span 10 --!>
+
+ </div> <!-- Row --!>
 <script>
-   
-  function displayServices(item) 
-  {
-	var vari=$('div.details#'+item);
-	console.log('Coming here', vari);
-	$('div.details#'+item)
-		.show()
-		.siblings().hide();
- 		$('div.sidebar').find('li#'+item)
-				.css('color', '#353535')
-				.siblings().css('color', '#477DB3');
-			
-	
-  } 
-  $('div.sidebar').find('li#DataEntry').on('click', function (){
-		$('div.details#DataEntry')
-                                      .show()
- 				      .siblings().hide();
-		$('div.sidebar').find('li#DataEntry')
+  
+  $(document).ready(function () {
+	   $('div.details#ECS')
+                          .show()
+                          .siblings().hide();
+	   $('div.sidebar').find('li#ECS')
+                          .css('color', '#353535')
+                          .siblings().css('color', '#477DB3');
+ });
+
+ $('div.sidebar').find('li#ECS').on('click', function (){
+                $('div.details#ECS')
+                       .show()
+                       .siblings().hide();
+
+                $('div.sidebar').find('li#ECS')
+                                .css('color', '#353535')
+                                .siblings().css('color', '#477DB3');
+  });
+
+  $('div.sidebar').find('li#DE').on('click', function (){
+		$('div.details#DE')
+                       .show()
+                       .siblings().hide();
+
+		$('div.sidebar').find('li#DE')
                                 .css('color', '#353535')
 				.siblings().css('color', '#477DB3');
   });
 
-  $('div.sidebar').find('li#EmailCustomerSupport').on('click', function (){
-                $('div.details#EmailCustomerSupport')	
-				      .show()
-                                      .siblings().hide();
+  $('div.sidebar').find('li#IMC').on('click', function (){
+                $('div.details#IMC')	
+	                  .show()
+                          .siblings().hide();
 
-  		  $('div.sidebar').find('li#EmailCustomerSupport')
+  		  $('div.sidebar').find('li#IMC')
                                 .css('color', '#353535')
                                 .siblings().css('color', '#477DB3');
   });
  
-  $('div.sidebar').find('li#SocialMediaSupport').on('click', function (){
-                $('div.details#SocialMediaSupport')	
+  $('div.sidebar').find('li#SMS').on('click', function (){
+                $('div.details#SMS')	
 				    .show()
                                     .siblings().hide();
 
+		  $('div.sidebar').find('li#SMS')
+                                .css('color', '#353535')
+                                .siblings().css('color', '#477DB3');
   });
  
-  $('div.sidebar').find('li#DataEntry').on('click', function (){
-                $('div.details#DataEntry').show();
+
+ $('div.sidebar').find('li#APR').on('click', function (){
+                $('div.details#APR')
+                                    .show()
+                                    .siblings().hide();
+
+                  $('div.sidebar').find('li#APR')
+                                .css('color', '#353535')
+                                .siblings().css('color', '#477DB3');
   });
 
-  $('div.sidebar').find('li#DataEntry').on('click', function (){
-                $('div.details#DataEntry').show();
+ $('div.sidebar').find('li#AVT').on('click', function (){
+                $('div.details#AVT')
+                                    .show()
+                                    .siblings().hide();
+
+                  $('div.sidebar').find('li#AVT')
+                                .css('color', '#353535')
+                                .siblings().css('color', '#477DB3');
   });
+
+ $('div.sidebar').find('li#IER').on('click', function (){
+                $('div.details#IER')
+                                    .show()
+                                    .siblings().hide();
+
+                  $('div.sidebar').find('li#IER')
+                                .css('color', '#353535')
+                                .siblings().css('color', '#477DB3');
+  });
+
+
 </script>
 
 

@@ -1,52 +1,7 @@
-<% provide(:title, 'HOME') %>
+<% provide(:title, 'Shank Global Solutions | Offshore services for less | Home') %>
+<% provide(:tab, 'HOME') %>
 
-<% provide(:currently_at, 'Home') %>
-<script>
-
-  var sliderUL = jQuery('ul.slider');
-  var images = sliderUL.find('img');
-  var imageLength = images.length;
-  var imageWidth = images[0].width;
-  var current = 1;
-  var sliderNav = $('div.slider-nav');
-  var margin = 0; 
-  var loc = 0;
-  $('div.slider-nav').find('li#next').on('click', function() {
-      if (current === imageLength)
-      {
-         margin = 0;
-         current = 1;
-      }
-      else {
-        margin = loc-imageWidth;
-        current++;
-      }
-      loc = margin;	
-      //sliderUL.animate({'margin-left': margin});
-      sliderUL.css('margin-left', margin);
-      console.log('margin: %d, current %d ', margin,current); 
-  });
-  $('div.slider-nav').find('li#prev').on('click', function() {
-      if (current === 1)
-      {
-         margin = -(imageLength*imageWidth) + imageWidth;
-         current = imageLength;
-      }
-      else {
-         margin = loc+imageWidth;
-         current--;
-      }
-      loc = margin;       
-      sliderUL.animate({'margin-left': margin});
-      console.log('margin: %d, current %d ', margin,current);	
-  });
-
-  $('div#feature1').on('click', function() {
-    $('div.content1').hide();
-    console.log("hi");
- });
-
-</script>
+<meta name="Description" content="Shank Global Solutions provides high quality back office work for reasonable prices. We offer data entry in Excel and Word, customer support using ZenDesk and Live Person, Audio and Video Transcription and Internet Marketing "> 
 <section id="MainContent">
 <!-- Section that contains Shank Global details --!>
   <h1 id="big"> Bringing offshore solutions for small businesses. </h1>
@@ -56,11 +11,11 @@
       <div class="span4">
         <div class="feature">
           <h2>  Virtual Administration </h2>
-          <center> <img src="/images/Email.jpeg"  </center>
+          <center> <img src="/images/Email.jpeg">  </center>
           <h3> 
-               <li> Email Customer Support </li>
-               <li> Email Marketing Campaign </li>
-               <li> Social Media Support </li> 
+               <li> <a href="/services" rel="external"> E-Customer Support </a> </li>
+               <li> <a href="/services" rel="external">  Internet Marketing Campaign </a> </li>
+               <li> <a href="/services" rel="external"> Social Media Support </a> </li> 
           </h3>
         </div> <!-- Feature --!>
       </div>  <!-- Span --!>
@@ -69,20 +24,20 @@
          <h2> <center> Back Office Support </center> </h2>
 	 <center> <img src="/images/BPO.jpeg"> </center>
          <h3> 
-	   <li>  Data Entry and Research      </li>
+	   <li>  Data Entry and Online Research      </li>
            <li>  Article typing and Proof-reading</li>
-           <li>  Document Conversions </li>
-           <li>  Open Cart Order Processing </li>
+           <li>  Audio and Video Transcription </li>
          </h3> <!-- Heading for Line Items --!>
       </div>  <!-- Feature --!>
     </div> <!-- Span --!>
     <div class="span4">
       <div class="feature" id="feature3">
         <h2> Miscellaneous </h2>
-        <center> <%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %> </center>
-        <h3> 
+        <center> <img src="/images/Computer.png"></center>
+	<h3> 
            <li>  Re-touching Image Blemishes </li>
-           <li>  Audio/Video Transcription   </li>
+           <li>  Document Conversion  </li>
+	   <li>  Contact Verification  </li>
         </h3>
       </div> <!-- Feature --!>
     </div>  <!--Span --!>  
@@ -103,17 +58,17 @@
 	 <div class="span3"> 
            <li> <center> <img src="/images/LowCost.png"> </center> </li> 
            <br>  
-           <div><center> <font class="rust"> Save Money </font> <br> We start at $5/hour and give discouted pacakages! </center> </div>
+           <div><center> <font class="rust"> Save Money </font> <br> We start at $4.5/hour and give great discounts! </center> </div>
          </div> <!-- Span3 --!>
          <div class="span3">
            <li> <center> <img src="/images/Timeliness.png"> </center> </li>
            <br>
-           <div><center> <font class="rust"> Timeliness </font>  <br> We will go to great lengths to meet your deadlines. </center> </div>
+           <div><center> <font class="rust"> Timeliness </font>  <br> We will work around the clock to meet your deadlines</center> </div>
          </div> <!-- Span 3 --!>
         <div class="span3">
           <li> <center> <img src="/images/Quality.png"> </center> </li>
           <br>
-          <div> <center> <font class="rust"> Quality </font> <br> Our quality will make you happy </center></div>
+          <div> <center> <font class="rust"> Quality </font> <br> With over 7 years of experience, we ensure quality is delivered   </center></div>
         </div> <!-- Span3 --!>
         <div class="span3"> 
           <li> <center> <img src="/images/Communication.png"> </center> </li>
@@ -134,8 +89,7 @@
 
 <script>
    $('div.feature').on('click', function() {
-	window.location='/services/'; 
 	var email='EmailCustomerSupport';
-	displayServices(email);        
+	$("#services").html(email);
 });
 </script>
