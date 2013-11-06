@@ -1,10 +1,9 @@
 <% provide(:title, 'Contact') %>
 <% provide(:tab, 'CONTACT') %>
 
+<h1> Contact </h1>
 <section id="Contact">
-  <img id=lightbox_close src="/images/dm.png"> 
-  <h2> Contact US </h2>
-  <%= form_for @message, :url => contact_path do |form| %>
+<%= form_for 'arun', :url => contact_path do |form| %>
   <fieldset class="fields">
     <div class="field">
       <%= form.label :name %>
@@ -30,17 +29,4 @@
     <%= form.submit "Send" %>
   </fieldset>
 <% end %>
-
-</div> <!-- Field -- !>
-
 </section>
-
-<script>
- $(document).ready(function($) {
- 
-   //$('div.field').first_child().focus();
-
-
-});
-
-</script

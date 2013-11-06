@@ -25,105 +25,11 @@ $rust: #912C00;
 }
 
 
-@font-face {
-    font-family: 'quicksandregular';
-    src: url('quicksand-regular-webfont.eot');
-    src: url('quicksand-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('quicksand-regular-webfont.woff') format('woff'),
-         url('quicksand-regular-webfont.ttf') format('truetype'),
-         url('quicksand-regular-webfont.svg#quicksandregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-@font-face {
-    font-family: 'exomedium';
-    src: url('exo-medium-webfont.eot');
-    src: url('exo-medium-webfont.eot?#iefix') format('embedded-opentype'),
-         url('exo-medium-webfont.woff') format('woff'),
-         url('exo-medium-webfont.ttf') format('truetype'),
-         url('exo-medium-webfont.svg#exomedium') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-html {
-//  overflow-y: scroll;
-}
-
-section {
-  //overflow: auto;
-}
-
-* {
-  font-family:  "Futura", "Trebuchet MS", Arial, sans-serif;
-}
-
-body {
-  //padding-top: 60px;
-}
-
-textarea {
-  resize: vertical;
-}
-
-.center {
-  text-align: center;
-}
-
-.center h1 {
-  margin-bottom: 10px;
-}
-
-
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1;
-}
-
-h1#big {
-
-  font-size: 3em;
-  letter-spacing: -2px;
-  margin-bottom: 30px;
-  text-align: center;
-  //font-weight: normal;
-  color: $rust;
-  font-family: "quicksandregular", Helvetica, Arial, sans-serif;
-  font-weight: 200;
-}
-
-h1#small {
-  font-size: 2em;
-  letter-spacing: -2px;
-  margin-bottom: 30px;
-  text-align: center;
-  font-weight: normal;
-  color: $grayLight;
-  font-family: "quicksandregular", Helvetica, Arial, Sans-serif;
-}
-
-h2 {
-   font-size: 1.8em;
-   color: $rust;
-   text-align: center;
-   font-weight: normal;
- }
-
-h3 {
-   font-size: 1.2em;
-   text-align: center;
-   color: $rust;
-}
-
 .navbar .container {
    margin-right: 250px;
    margin-left: 250px;
   // width: 700px;
-  #background: #777;
+  background: #777;
 }
 
 #main_nav { 
@@ -153,7 +59,7 @@ h3 {
       text-align: center;
       // Font
       color: $rust;
-      font-size:67px;
+      font-size:57px;
       font-family: tangerineregular;
        background:none;
        z-index: 9;
@@ -238,9 +144,10 @@ footer {
   } // end ul
 } // footer close
 
-section#MainContent {
-  padding-top: 100px; 
-  height: 600px;
+section#MainContent
+{
+ padding-top: 100px; 
+ height: 600px;
 }
 
 section#Advantages
@@ -249,8 +156,7 @@ section#Advantages
   color: $black;
   font-size: 14px;
   height: 400px;
-  background: $white;
-   //background-image: "ggbridge.png";
+  //background-image: "ggbridge.png";
 
 }
 section#Services
@@ -270,7 +176,7 @@ section#About
    padding: 60px;
    height: 400px; 
    font-size: 14px;
-   background: #f4f4f4;
+   background: #f7f7f7;
 }
 
 a.get-started {
@@ -368,7 +274,7 @@ section#About .skills
 #Intro
 {
    font-size: 20px;
-   font-family: "Arial";   
+   
 
 }
 

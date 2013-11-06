@@ -2,9 +2,10 @@
 <% provide(:tab, 'CONTACT') %>
 
 <section id="Contact">
+<div class="container">
   <img id=lightbox_close src="/images/dm.png"> 
   <h2> Contact US </h2>
-  <%= form_for @message, :url => contact_path do |form| %>
+  <%= form_for arun, :url => contact_path do |form| %>
   <fieldset class="fields">
     <div class="field">
       <%= form.label :name %>
@@ -32,6 +33,7 @@
 <% end %>
 
 </div> <!-- Field -- !>
+</div> <!-- Container --!>
 
 </section>
 

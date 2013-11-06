@@ -1,11 +1,7 @@
-<% provide(:title, 'Contact') %>
-<% provide(:tab, 'CONTACT') %>
-
-<section id="Contact">
-  <img id=lightbox_close src="/images/dm.png"> 
-  <h2> Contact US </h2>
-  <%= form_for @message, :url => contact_path do |form| %>
-  <fieldset class="fields">
+<%= form_for @message, :url => contact_path do |form| %>
+  
+<section id=Contact>
+<fieldset class="fields">
     <div class="field">
       <%= form.label :name %>
       <%= form.text_field :name %>
@@ -31,16 +27,5 @@
   </fieldset>
 <% end %>
 
-</div> <!-- Field -- !>
-
 </section>
 
-<script>
- $(document).ready(function($) {
- 
-   //$('div.field').first_child().focus();
-
-
-});
-
-</script
