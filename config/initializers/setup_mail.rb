@@ -1,13 +1,12 @@
 ActionMailer::Base.delivery_method = :smtp
 
 ActionMailer::Base.smtp_settings = {  
-      :address              => "smtp.gmail.com",  
-      :port                 => 587,  
-      :user_name            => "deepakm.ccx@gmail.com", #Your user name
-      :password             => "martian12", # Your password
+      :address              => "smtp.yahoo.com",  
+      :port                 => 25,  
+      :user_name            => "deepakmani@yahoo.com", #Your user name
+      :password             => "Han1uman", # Your password
       :authentication       => "plain",  
       :enable_starttls_auto => true,  
-      :domain               => "gmail.com" 
   }
 
 #config.action_mailer.default_url_options = { :host => "localhost:4000" }
